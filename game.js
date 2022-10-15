@@ -235,7 +235,7 @@ app.ticker.add(() => {
                 placed_objects.push(current_module)
                 current_module = create_modul(module_sequence.pop())
                 current_module.y = 0
-                if (module_blocked_at_bottom(current_module) || module_placement_blocked(current_module)){
+                if ((module_blocked_at_bottom(current_module) && module_sequence.length != 0) || module_placement_blocked(current_module)){
                     finished = true
                     end_msg = "Du bist exmatrikuliert..."
                 }
