@@ -3,7 +3,10 @@ const SEMESTER_HEIGHT = 50
 const CREDITS_PER_SEMESTER = 30
 const SEMESTER_SPACING = 10
 const NUM_SEMESTERS = 6
-const MODUL_BORDER =
+const MODUL_BORDER = 4
+const STEP_SIZE = 3
+
+let finished = false
 
 placed_objects = []
 
@@ -79,7 +82,7 @@ function create_modul(modul_name) {
     return modul_container
 }
 
-function testForAABB(object1, object2, depth_offset = 0, side_offset = 0) {
+function testForAABB(object1, object2, depth_offset, side_offset) {
     const bounds1 = object1.getBounds();
     const bounds2 = object2.getBounds();
 
@@ -94,25 +97,24 @@ function move_module_side(modul, cp) {
     const right_boundary = CREDITS_PER_SEMESTER * PX_PER_CREDIT - modul.width
     const module_left_border = new_x >= 0
     const module_right_border = new_x < right_boundary
-    if (module_left_border && module_right_border && !module_colliding_side(modul, cp)) {
+    const module_sides_free = !module_colliding_side(modul, cp * PX_PER_CREDIT)
+    if (module_left_border && module_right_border && module_sides_free) {
         modul.x = new_x
     }
 }
 
-function module_colliding_side(modul, cp) {
-    return false
-    const collides_with_other_object = placed_objects.some(
+function module_colliding_side(modul, side_offset) {
+    return placed_objects.some(
         (obj) => testForAABB(
-            obj, modul, side_offset=PX_PER_CREDIT * cp))
-
-    return collides_with_other_object;
+            obj, modul, 0, side_offset))
 }
 
 function module_blocked_at_bottom(modul) {
     const collides_with_other_object = placed_objects.some((obj) => testForAABB(
         obj,
         modul,
-        depth_offset = 1 * (SEMESTER_HEIGHT + SEMESTER_SPACING)))
+        SEMESTER_HEIGHT + SEMESTER_SPACING,
+        0))
     const last_semester = modul.y >= (NUM_SEMESTERS - 1) * (SEMESTER_HEIGHT + SEMESTER_SPACING)
     return collides_with_other_object || last_semester;
 }
@@ -130,10 +132,10 @@ function parse_color(color_string) {
 
 function onKeyDown(key) {
     if (key.keyCode === 65) {
-        move_module_side(current_module, -1)
+        move_module_side(current_module, -STEP_SIZE)
     }
     if (key.keyCode === 68) {
-        move_module_side(current_module, 1)
+        move_module_side(current_module, STEP_SIZE)
     }
     if (key.keyCode === 83) {
         move_module_down(current_module)
@@ -178,14 +180,17 @@ semester_grid.addChild(current_module)
 
 game_counter = 1
 app.ticker.add(() => {
-    if (game_counter % 200 === 0) {
+    if (module_blocked_at_bottom(current_module)) {
+        if (module_sequence.length == 0) {
+            finished = true
+        } else {
+            placed_objects.push(current_module)
+            current_module = create_modul(module_sequence.pop())
+            current_module.y = 0
+            semester_grid.addChild(current_module)
+        }
+    } else if (game_counter % 200 === 0) {
         move_module_down(current_module)
-    }
-    if (module_blocked_at_bottom(current_module) && module_sequence.length != 0) {
-        placed_objects.push(current_module)
-        current_module = create_modul(module_sequence.pop())
-        current_module.y = 0
-        semester_grid.addChild(current_module)
     }
     game_counter++
 });
