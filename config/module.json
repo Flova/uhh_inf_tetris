@@ -31,7 +31,7 @@
         "color": "f1fdb2",
         "credits": 3
     },
-    "Formale Grundlagen\nDer Informatik I": {
+    "Formale Grundlagen\nder Informatik I": {
         "color": "c87bf6",
         "credits": 9
     },
@@ -54,5 +54,73 @@
     "Wahl": {
         "color": "ffcf7d",
         "credits": 9
+    },
+    "Datenschutz": {
+        "color": "ffffff",
+        "credits": 3
+    },
+    "Grundlagen von\nDatenbanken": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Interaktive Computergrafik": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Hochleistungsrechnen": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Projekt-\nmanagement": {
+        "color": "ffffff",
+        "credits": 3
+    },
+    "Einführung in die\nBildverarbeitung": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Data-driven Intelligent Systems": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Datenvisualisierung und GPU-Computing": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Digitale Medien- und Signalverarbeitung": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Eingebettete Systeme": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Interaktionsdesign": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Informatikgestützte Gestaltung und\nModellierung von Organisationen": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Moderne Betriebssysteme": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Philosophie, Gesellschaft\nund IT": {
+        "color": "ffffff",
+        "credits": 6
+    },
+    "Softwaretechnik": {
+        "color": "ffffff",
+        "credits": 9
+    },
+    "Urheberrecht": {
+        "color": "ffffff",
+        "credits": 3
+    },
+    "Einführung in die\nSystem-Medizin": {
+        "color": "ffffff",
+        "credits": 6
     }
 }
