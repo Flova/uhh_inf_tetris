@@ -1,0 +1,58 @@
+{
+    "Softwareentwicklung I": {
+        "color": "73a1ec",
+        "credits": 6
+    },
+    "Softwareentwicklung II": {
+        "color": "73a1ec",
+        "credits": 6
+    },
+    "Mathe I": {
+        "color": "54fefd",
+        "credits": 9
+    },
+    "Mathe II": {
+        "color": "54fefd",
+        "credits": 9
+    },
+    "Ikon": {
+        "color": "73a1ec",
+        "credits": 6
+    },
+    "Rechnerstruckturen und Betriebssysteme": {
+        "color": "c4ccd3",
+        "credits": 9
+    },
+    "Proseminar": {
+        "color": "f1fdb2",
+        "credits": 3
+    },
+    "Methoden\nkompetenz": {
+        "color": "f1fdb2",
+        "credits": 3
+    },
+    "Formale Grundlagen\nDer Informatik I": {
+        "color": "c87bf6",
+        "credits": 9
+    },
+    "Praktikum": {
+        "color": "ff9a6c",
+        "credits": 6
+    },
+    "Projekt": {
+        "color": "ff9a6c",
+        "credits": 9
+    },
+    "Seminar": {
+        "color": "f1fdb2",
+        "credits": 3
+    },
+    "Abschlussmodul\n(Bachelorarbeit)": {
+        "color": "ec9393",
+        "credits": 12
+    },
+    "Wahl": {
+        "color": "ffcf7d",
+        "credits": 9
+    }
+}
