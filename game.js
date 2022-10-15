@@ -187,7 +187,11 @@ app.ticker.add(() => {
             placed_objects.push(current_module)
             current_module = create_modul(module_sequence.pop())
             current_module.y = 0
-            semester_grid.addChild(current_module)
+            if (module_blocked_at_bottom(current_module)){
+                alert("Game Over")
+            } else {
+                semester_grid.addChild(current_module)
+            }
         }
     } else if (game_counter % 200 === 0) {
         move_module_down(current_module)
