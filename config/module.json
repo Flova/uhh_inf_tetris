@@ -28,6 +28,10 @@
             "color": "c4ccd3",
             "credits": 9
         },
+        "Rechnerstruckturen": {
+            "color": "c4ccd3",
+            "credits": 9
+        },
         "Proseminar": {
             "color": "f1fdb2",
             "credits": 3
@@ -127,6 +131,22 @@
         "Einführung in die\nSystem-Medizin": {
             "color": "ffffff",
             "credits": 6
+        },
+        "Einführung in die\ntheoretische Informatik": {
+            "color": "4efef9",
+            "credits": 6
+        },
+        "Verteilte Systeme\nund Systemsicherheit": {
+            "color": "c1ccd4",
+            "credits": 6
+        },
+        "Berechenbarkeit,\nKomplexität\nund Approximation": {
+            "color": "54fdfd",
+            "credits": 6
+        },
+        "Stochastik I": {
+            "color": "54fdfd",
+            "credits": 6
         }
     },
     "groups": {
@@ -137,7 +157,7 @@
             "Mathe I",
             "Mathe II",
             "Ikon",
-            "Rechnerstruckturen und Betriebssysteme",
+            "Rechnerstruckturen",
             "Proseminar",
             "Methoden\nkompetenz",
             "Formale Grundlagen\nder Informatik I",
@@ -147,6 +167,27 @@
             "Abschlussmodul\n(Bachelorarbeit)",
             "Wahl",
             "Wahl"
+        ],
+        "pflicht_inf_2019": [
+            "Softwareentwicklung I",
+            "Softwareentwicklung II",
+            "Algorithmen und\nDatenstrukturen",
+            "Mathe I",
+            "Mathe II",
+            "Ikon",
+            "Rechnerstruckturen und Betriebssysteme",
+            "Proseminar",
+            "Methoden\nkompetenz",
+            "Praktikum",
+            "Projekt",
+            "Seminar",
+            "Abschlussmodul\n(Bachelorarbeit)",
+            "Wahl",
+            "Wahl",
+            "Einführung in die\ntheoretische Informatik",
+            "Verteilte Systeme\nund Systemsicherheit",
+            "Berechenbarkeit,\nKomplexität\nund Approximation",
+            "Stochastik I"
         ],
         "wahlpflicht_inf": [
             "Datenschutz",
@@ -176,6 +217,16 @@
             {
                 "name": "wahlpflicht_inf",
                 "num_cp": 66
+            }
+        ],
+        "Informatik 2019": [
+            {
+                "name": "pflicht_inf_2019",
+                "num_cp": -1
+            },
+            {
+                "name": "wahlpflicht_inf",
+                "num_cp": 51
             }
         ]
     }

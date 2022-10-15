@@ -165,7 +165,10 @@ const module_config = JSON.parse(request.responseText)
 const module_definitions = module_config["modules"]
 const module_groups = module_config["groups"]
 
-const studiengang_name = "Informatik 2013"
+const studiengang_name = new URLSearchParams(window.location.search).get('studiengang');
+
+document.getElementById("heading").innerText = "UHH " + studiengang_name + " Modul Tetris"
+
 const studiengang = module_config["studiengänge"][studiengang_name]
 
 module_names = Object.keys(module_definitions)
@@ -174,7 +177,6 @@ module_sequence = []
 
 for (const module_group of studiengang) {
     group_elements = module_groups[module_group["name"]]
-    console.log(module_group["name"])
     if (module_group["num_cp"] === -1) {
         for (const modul_name of group_elements) {
             module_sequence.push(modul_name)
