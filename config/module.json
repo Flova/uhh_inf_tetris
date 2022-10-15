@@ -1,126 +1,182 @@
 {
-    "Softwareentwicklung I": {
-        "color": "73a1ec",
-        "credits": 6
+    "modules": {
+        "Softwareentwicklung I": {
+            "color": "73a1ec",
+            "credits": 6
+        },
+        "Softwareentwicklung II": {
+            "color": "73a1ec",
+            "credits": 6
+        },
+        "Algorithmen und\nDatenstrukturen": {
+            "color": "73a1ec",
+            "credits": 6
+        },
+        "Mathe I": {
+            "color": "54fefd",
+            "credits": 9
+        },
+        "Mathe II": {
+            "color": "54fefd",
+            "credits": 9
+        },
+        "Ikon": {
+            "color": "73a1ec",
+            "credits": 6
+        },
+        "Rechnerstruckturen und Betriebssysteme": {
+            "color": "c4ccd3",
+            "credits": 9
+        },
+        "Proseminar": {
+            "color": "f1fdb2",
+            "credits": 3
+        },
+        "Methoden\nkompetenz": {
+            "color": "f1fdb2",
+            "credits": 3
+        },
+        "Formale Grundlagen\nder Informatik I": {
+            "color": "c87bf6",
+            "credits": 9
+        },
+        "Praktikum": {
+            "color": "ff9a6c",
+            "credits": 6
+        },
+        "Projekt": {
+            "color": "ff9a6c",
+            "credits": 9
+        },
+        "Seminar": {
+            "color": "f1fdb2",
+            "credits": 3
+        },
+        "Abschlussmodul\n(Bachelorarbeit)": {
+            "color": "ec9393",
+            "credits": 12
+        },
+        "Wahl": {
+            "color": "ffcf7d",
+            "credits": 9
+        },
+        "Datenschutz": {
+            "color": "ffffff",
+            "credits": 3
+        },
+        "Grundlagen von\nDatenbanken": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Interaktive Computergrafik": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Hochleistungsrechnen": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Projekt-\nmanagement": {
+            "color": "ffffff",
+            "credits": 3
+        },
+        "Einführung in die\nBildverarbeitung": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Data-driven Intelligent Systems": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Datenvisualisierung und GPU-Computing": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Digitale Medien- und Signalverarbeitung": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Eingebettete Systeme": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Interaktionsdesign": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Informatikgestützte Gestaltung und\nModellierung von Organisationen": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Moderne Betriebssysteme": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Philosophie, Gesellschaft\nund IT": {
+            "color": "ffffff",
+            "credits": 6
+        },
+        "Softwaretechnik": {
+            "color": "ffffff",
+            "credits": 9
+        },
+        "Urheberrecht": {
+            "color": "ffffff",
+            "credits": 3
+        },
+        "Einführung in die\nSystem-Medizin": {
+            "color": "ffffff",
+            "credits": 6
+        }
     },
-    "Softwareentwicklung II": {
-        "color": "73a1ec",
-        "credits": 6
+    "groups": {
+        "pflicht_inf_2013": [
+            "Softwareentwicklung I",
+            "Softwareentwicklung II",
+            "Algorithmen und\nDatenstrukturen",
+            "Mathe I",
+            "Mathe II",
+            "Ikon",
+            "Rechnerstruckturen und Betriebssysteme",
+            "Proseminar",
+            "Methoden\nkompetenz",
+            "Formale Grundlagen\nder Informatik I",
+            "Praktikum",
+            "Projekt",
+            "Seminar",
+            "Abschlussmodul\n(Bachelorarbeit)",
+            "Wahl",
+            "Wahl"
+        ],
+        "wahlpflicht_inf": [
+            "Datenschutz",
+            "Grundlagen von\nDatenbanken",
+            "Interaktive Computergrafik",
+            "Hochleistungsrechnen",
+            "Projekt-\nmanagement",
+            "Einführung in die\nBildverarbeitung",
+            "Datenvisualisierung und GPU-Computing",
+            "Digitale Medien- und Signalverarbeitung",
+            "Eingebettete Systeme",
+            "Interaktionsdesign",
+            "Informatikgestützte Gestaltung und\nModellierung von Organisationen",
+            "Moderne Betriebssysteme",
+            "Philosophie, Gesellschaft\nund IT",
+            "Softwaretechnik",
+            "Urheberrecht",
+            "Einführung in die\nSystem-Medizin"
+        ]
     },
-    "Mathe I": {
-        "color": "54fefd",
-        "credits": 9
-    },
-    "Mathe II": {
-        "color": "54fefd",
-        "credits": 9
-    },
-    "Ikon": {
-        "color": "73a1ec",
-        "credits": 6
-    },
-    "Rechnerstruckturen und Betriebssysteme": {
-        "color": "c4ccd3",
-        "credits": 9
-    },
-    "Proseminar": {
-        "color": "f1fdb2",
-        "credits": 3
-    },
-    "Methoden\nkompetenz": {
-        "color": "f1fdb2",
-        "credits": 3
-    },
-    "Formale Grundlagen\nder Informatik I": {
-        "color": "c87bf6",
-        "credits": 9
-    },
-    "Praktikum": {
-        "color": "ff9a6c",
-        "credits": 6
-    },
-    "Projekt": {
-        "color": "ff9a6c",
-        "credits": 9
-    },
-    "Seminar": {
-        "color": "f1fdb2",
-        "credits": 3
-    },
-    "Abschlussmodul\n(Bachelorarbeit)": {
-        "color": "ec9393",
-        "credits": 12
-    },
-    "Wahl": {
-        "color": "ffcf7d",
-        "credits": 9
-    },
-    "Datenschutz": {
-        "color": "ffffff",
-        "credits": 3
-    },
-    "Grundlagen von\nDatenbanken": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Interaktive Computergrafik": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Hochleistungsrechnen": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Projekt-\nmanagement": {
-        "color": "ffffff",
-        "credits": 3
-    },
-    "Einführung in die\nBildverarbeitung": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Data-driven Intelligent Systems": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Datenvisualisierung und GPU-Computing": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Digitale Medien- und Signalverarbeitung": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Eingebettete Systeme": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Interaktionsdesign": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Informatikgestützte Gestaltung und\nModellierung von Organisationen": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Moderne Betriebssysteme": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Philosophie, Gesellschaft\nund IT": {
-        "color": "ffffff",
-        "credits": 6
-    },
-    "Softwaretechnik": {
-        "color": "ffffff",
-        "credits": 9
-    },
-    "Urheberrecht": {
-        "color": "ffffff",
-        "credits": 3
-    },
-    "Einführung in die\nSystem-Medizin": {
-        "color": "ffffff",
-        "credits": 6
+    "studiengänge": {
+        "Informatik 2013": [
+            {
+                "name": "pflicht_inf_2013",
+                "num_cp": -1
+            },
+            {
+                "name": "wahlpflicht_inf",
+                "num_cp": 66
+            }
+        ]
     }
 }

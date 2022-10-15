@@ -2,7 +2,7 @@ const PX_PER_CREDIT = 22
 const SEMESTER_HEIGHT = 50
 const CREDITS_PER_SEMESTER = 30
 const SEMESTER_SPACING = 10
-const NUM_SEMESTERS = 6
+const NUM_SEMESTERS = 8
 const MODUL_BORDER = 4
 const STEP_SIZE = 3
 
@@ -48,7 +48,7 @@ function create_semester_grid() {
 }
 
 function create_modul(modul_name) {
-    const modul = MODULE_DEFINITIONS[modul_name]
+    const modul = module_definitions[modul_name]
 
     const modul_container = new PIXI.Container();
 
@@ -71,6 +71,7 @@ function create_modul(modul_name) {
         fill: ['#000000'],
         fontSize: 10,
         fontWeight: 'lighter',
+        align: "center"
     });
     const basicText = new PIXI.Text(modul_name, textStyle);
     basicText.x = modul['credits'] * PX_PER_CREDIT / 2;
@@ -153,15 +154,52 @@ if (!PIXI.utils.isWebGLSupported()) {
 const request = new XMLHttpRequest();
 request.open("GET", "config/module.json", false);
 request.send(null);
-const MODULE_DEFINITIONS = JSON.parse(request.responseText);
 
-module_names = Object.keys(MODULE_DEFINITIONS)
+const module_config = JSON.parse(request.responseText)
+const module_definitions = module_config["modules"]
+const module_groups = module_config["groups"]
 
-module_sequence = module_names.sort((a, b) => 0.5 - Math.random())
+const studiengang_name = "Informatik 2013"
+const studiengang = module_config["studiengänge"][studiengang_name]
+
+module_names = Object.keys(module_definitions)
+
+module_sequence = []
+
+for (const module_group of studiengang) {
+    group_elements = module_groups[module_group["name"]]
+    console.log(module_group["name"])
+    if (module_group["num_cp"] === -1) {
+        for (const modul_name of group_elements) {
+            module_sequence.push(modul_name)
+        }
+    } else {
+        for (let index = 0; index < 1000; index++) {
+            configuration = []
+            sum_cp = 0
+            group_elements = group_elements.sort((a, b) => 0.5 - Math.random())
+            for (let index = 0; index < group_elements.length && sum_cp < module_group["num_cp"]; index++) {
+                const modul_name = group_elements[index];
+                configuration.push(modul_name)
+                sum_cp += module_definitions[modul_name]["credits"]
+            }
+            if (sum_cp === module_group["num_cp"]) {
+                for (const modul_name of configuration) {
+                    module_sequence.push(modul_name)
+                }
+                break
+            }
+        }
+        console.log(module_sequence)
+    }
+
+}
+
+module_sequence = module_sequence.sort((a, b) => 0.5 - Math.random())
 
 const app = new PIXI.Application({
-    width: 800,         // default: 800
-    height: 600,        // default: 600
+    width: 1024,         // default: 800
+    height: 800,        // default: 600
     antialias: true,    // default: false
     resolution: 1       // default: 1
 });
@@ -169,8 +207,8 @@ const app = new PIXI.Application({
 app.renderer.backgroundColor = 0xFFFFFF;
 
 semester_grid = create_semester_grid()
-semester_grid.x = 50
-semester_grid.y = 50
+semester_grid.x = 2
+semester_grid.y = 2
 
 app.stage.addChild(semester_grid)
 
@@ -199,4 +237,4 @@ app.ticker.add(() => {
     game_counter++
 });
 
-document.body.appendChild(app.view);
+document.getElementById("canvas_container").appendChild(app.view)
