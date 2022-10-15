@@ -64,6 +64,10 @@
             "color": "ffcf7d",
             "credits": 9
         },
+        " Wahl ": {
+            "color": "ffcf7d",
+            "credits": 6
+        },
         "Datenschutz": {
             "color": "ffffff",
             "credits": 3
@@ -147,6 +151,10 @@
         "Stochastik I": {
             "color": "54fdfd",
             "credits": 6
+        },
+        "Industriepraktikum": {
+            "color": "ff9a6c",
+            "credits": 18
         }
     },
     "groups": {
@@ -206,6 +214,45 @@
             "Softwaretechnik",
             "Urheberrecht",
             "Einführung in die\nSystem-Medizin"
+        ],
+        "pflicht_sse_2019": [
+            "Softwareentwicklung I",
+            "Softwareentwicklung II",
+            "Mathe I",
+            "Mathe II",
+            "Ikon",
+            "Rechnerstruckturen und Betriebssysteme",
+            "Proseminar",
+            "Methoden\nkompetenz",
+            "Praktikum",
+            "Projekt",
+            "Seminar",
+            "Abschlussmodul\n(Bachelorarbeit)",
+            "Wahl",
+            "Wahl",
+            " Wahl ",
+            "Einführung in die\ntheoretische Informatik",
+            "Verteilte Systeme\nund Systemsicherheit",
+            "Softwaretechnik",
+            "Grundlagen von\nDatenbanken",
+            "Industriepraktikum",
+            "Projekt-\nmanagement"
+        ],
+        "wahlpflicht_sse": [
+            "Datenschutz",
+            "Interaktive Computergrafik",
+            "Hochleistungsrechnen",
+            "Einführung in die\nBildverarbeitung",
+            "Datenvisualisierung und GPU-Computing",
+            "Digitale Medien- und Signalverarbeitung",
+            "Eingebettete Systeme",
+            "Interaktionsdesign",
+            "Informatikgestützte Gestaltung und\nModellierung von Organisationen",
+            "Moderne Betriebssysteme",
+            "Philosophie, Gesellschaft\nund IT",
+            "Softwaretechnik",
+            "Urheberrecht",
+            "Einführung in die\nSystem-Medizin"
         ]
     },
     "studiengänge": {
@@ -227,6 +274,16 @@
             {
                 "name": "wahlpflicht_inf",
                 "num_cp": 51
+            }
+        ],
+        "Software-System-Entwicklung 2019": [
+            {
+                "name": "pflicht_sse_2019",
+                "num_cp": -1
+            },
+            {
+                "name": "wahlpflicht_sse",
+                "num_cp": 27
             }
         ]
     }

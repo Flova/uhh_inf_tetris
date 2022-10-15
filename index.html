@@ -4,17 +4,28 @@
 <head>
   <meta charset="utf-8">
   <title>UHH Tetris</title>
+  <style>
+    a {
+      background-color: #221b49;
+      color: #eee;
+      padding: 15px 25px;
+      text-decoration: none;
+      margin: 1em;
+    }
+
+    a: hover {
+      background-color: #d6336c;
+    }
+  </style>
 </head>
 
 <body>
   <div id="content_container" style="display: flex; flex-direction: column; align-items: center; justify-content: center">
     <h1 id="heading" style="font-family: 'Lucida Console', 'Courier New', monospace; margin: 1.5em;">UHH Informatik Modul Tetris</h1>
-    <h3 id="game_state" style="font-family: 'Lucida Console', 'Courier New', monospace; margin: 1em;"></h3>
-    <div id="canvas_container"></div>
-    <h3 style="font-family: 'Lucida Console', 'Courier New', monospace; margin: 0.3em;">Steuerung: A,S,D</h3>
+    <a href="game.html?studiengang=Informatik%202013">Informatik 2013</a>
+    <a href="game.html?studiengang=Informatik%202019">Informatik 2019</a>
+    <a href="game.html?studiengang=Software-System-Entwicklung%202019">Software-System-Entwicklung 2019</a>
   </div>
-  <script src="pixi.js"></script>
-  <script type="text/javascript" src="game.js"></script>
 </body>
 
 </html>
