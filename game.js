@@ -199,7 +199,7 @@ module_sequence = module_sequence.sort((a, b) => 0.5 - Math.random())
 
 const app = new PIXI.Application({
     width: 1024,         // default: 800
-    height: 800,        // default: 600
+    height: 700,        // default: 600
     antialias: true,    // default: false
     resolution: 1       // default: 1
 });
@@ -216,23 +216,32 @@ current_module = create_modul(module_sequence.pop())
 
 semester_grid.addChild(current_module)
 
+end_msg = ""
+
 game_counter = 1
 app.ticker.add(() => {
-    if (module_blocked_at_bottom(current_module)) {
-        if (module_sequence.length == 0) {
-            finished = true
-        } else {
-            placed_objects.push(current_module)
-            current_module = create_modul(module_sequence.pop())
-            current_module.y = 0
-            if (module_blocked_at_bottom(current_module)){
-                alert("Game Over")
+    if (!finished) {
+        if (module_blocked_at_bottom(current_module)) {
+            if (module_sequence.length == 0) {
+                finished = true
+                end_msg = "Du hast das Studium erfolgreich abgeschlossen!"
             } else {
-                semester_grid.addChild(current_module)
+                placed_objects.push(current_module)
+                current_module = create_modul(module_sequence.pop())
+                current_module.y = 0
+                if (module_blocked_at_bottom(current_module)){
+                    finished = true
+                    end_msg = "Du bist exmatrikuliert..."
+                } else {
+                    semester_grid.addChild(current_module)
+                }
             }
+        } else if (game_counter % 100 === 0) {
+            move_module_down(current_module)
         }
-    } else if (game_counter % 200 === 0) {
-        move_module_down(current_module)
+    } else {
+        document.getElementById("game_state").innerHTML = end_msg + " <a href='#' onClick='window.location.reload();'>Retry?</a>"
+        app.stop()
     }
     game_counter++
 });
