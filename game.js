@@ -1,9 +1,9 @@
-const PX_PER_CREDIT = 22
-const SEMESTER_HEIGHT = 50
+const PX_PER_CREDIT = 34
+const SEMESTER_HEIGHT = 70
 const CREDITS_PER_SEMESTER = 30
-const SEMESTER_SPACING = 10
+const SEMESTER_SPACING = 18
 const NUM_SEMESTERS = 8
-const MODUL_BORDER = 4
+const MODUL_BORDER = 6
 const STEP_SIZE = 3
 
 let finished = false
@@ -19,7 +19,7 @@ function create_semester_grid() {
 
         const semester_block = new PIXI.Graphics();
 
-        semester_block.lineStyle(2, 0xcccccc, 1);
+        semester_block.lineStyle(3, 0xcccccc, 1);
         semester_block.beginFill(0xFFFFFF);
         semester_block.drawRect(0, 0, 30 * PX_PER_CREDIT, SEMESTER_HEIGHT);
         semester_block.endFill();
@@ -29,7 +29,7 @@ function create_semester_grid() {
         for (let index = 0; index < CREDITS_PER_SEMESTER * PX_PER_CREDIT; index += 3 * PX_PER_CREDIT) {
             const credit_line = new PIXI.Graphics();
 
-            credit_line.lineStyle(1, 0xcccccc, 1);
+            credit_line.lineStyle(3, 0xcccccc, 1);
             credit_line.moveTo(0, 0);
             credit_line.lineTo(0, SEMESTER_HEIGHT);
 
@@ -54,7 +54,7 @@ function create_modul(modul_name) {
 
     const modul_block = new PIXI.Graphics();
 
-    modul_block.lineStyle(2, 0xcccccc, 1);
+    modul_block.lineStyle(3, 0xcccccc, 1);
     modul_block.beginFill(parse_color(modul['color']));
     modul_block.drawRect(
         MODUL_BORDER,
@@ -69,7 +69,7 @@ function create_modul(modul_name) {
     const textStyle = new PIXI.TextStyle({
         fontFamily: 'Arial',
         fill: ['#000000'],
-        fontSize: 10,
+        fontSize: 14,
         fontWeight: 'lighter',
         align: "center"
     });
