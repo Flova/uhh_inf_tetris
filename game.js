@@ -110,6 +110,12 @@ function module_colliding_side(modul, side_offset) {
             obj, modul, 0, side_offset))
 }
 
+function module_placement_blocked(modul) {
+    return placed_objects.some(
+        (obj) => testForAABB(
+            obj, modul, 0, 0))
+}
+
 function module_blocked_at_bottom(modul) {
     const collides_with_other_object = placed_objects.some((obj) => testForAABB(
         obj,
@@ -190,9 +196,7 @@ for (const module_group of studiengang) {
                 break
             }
         }
-        console.log(module_sequence)
     }
-
 }
 
 module_sequence = module_sequence.sort((a, b) => 0.5 - Math.random())
@@ -229,10 +233,11 @@ app.ticker.add(() => {
                 placed_objects.push(current_module)
                 current_module = create_modul(module_sequence.pop())
                 current_module.y = 0
-                if (module_blocked_at_bottom(current_module)){
+                if (module_blocked_at_bottom(current_module) || module_placement_blocked(current_module)){
                     finished = true
                     end_msg = "Du bist exmatrikuliert..."
-                } else {
+                }
+                if (!module_placement_blocked(current_module)) {
                     semester_grid.addChild(current_module)
                 }
             }
